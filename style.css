@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  background-color: #111;
+  color: #f5f5f5;
+  font-family: 'Courier New', monospace;
+}
+
+.level {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #444;
+}
