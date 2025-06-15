@@ -1,15 +1,191 @@
+/* Global Styles */
 body {
   margin: 0;
+  padding: 0;
   background-color: #111;
+  font-family: 'Press Start 2P', monospace;
   color: #f5f5f5;
-  font-family: 'Courier New', monospace;
 }
 
+/* Shared Section Style */
 .level {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-bottom: 2px solid #444;
+  padding: 2rem;
+  box-sizing: border-box;
+  border-bottom: 2px solid #333;
+  text-align: center;
 }
+
+/* Level 1 Styling */
+#level-1 {
+  background-color: #222831;
+  color: #ffcc00;
+}
+
+#level-1 h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#level-1 p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Level 2 Styling */
+#level-2 {
+  background-color: #1a1a2e;
+  color: #00ffcc;
+}
+
+#level-2 h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#level-2 p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+/* Level 3 Styling */
+#level-3 {
+  background-color: #2e1a47;
+  color: #ff66cc;
+}
+
+#level-3 h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#level-3 p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+/* Level 4 Styling */
+#level-4 {
+  background-color: #331a00;
+  color: #ffcc66;
+}
+
+#level-4 h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#level-4 p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+/* Level 5 Styling */
+#level-5 {
+  background-color: #00334e;
+  color: #66d9ef;
+}
+
+#level-5 h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#level-5 p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Level 6 Styling */
+#level-6 {
+  background-color: #143601;
+  color: #aaff00;
+}
+
+#level-6 h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#level-6 p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Level 7 Styling */
+#level-7 {
+  background-color: #320029;
+  color: #ff66aa;
+}
+
+#level-7 h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#level-7 p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Level 8 Styling */
+#level-8 {
+  background-color: #113c27;
+  color: #66ff99;
+}
+
+#level-8 h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#level-8 p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Level 9 Styling */
+#level-9 {
+  background-color: #1f1f1f;
+  color: #cccccc;
+}
+
+#level-9 h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+#level-9 p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.level {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.level.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.avatar {
+  width: 100px;
+  height: auto;
+  margin-top: 20px;
+  image-rendering: pixelated;
+  filter: drop-shadow(2px 2px 0 #000);
+}
+
+
