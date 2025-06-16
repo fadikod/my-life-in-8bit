@@ -186,6 +186,80 @@ body {
   margin-top: 20px;
   image-rendering: pixelated;
   filter: drop-shadow(2px 2px 0 #000);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
 }
+
+.level.visible .avatar {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.hud {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid #fff;
+  color: #00ff99;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.6rem;
+  padding: 10px;
+  z-index: 9999;
+  line-height: 1.5;
+  width: 140px;
+  text-shadow: 1px 1px #000;
+}
+
+.hud-line {
+  margin-bottom: 5px;
+}
+.god-banner {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #000;
+  color: #00ffcc;
+  font-family: 'Press Start 2P', monospace;
+  padding: 20px;
+  font-size: 0.6rem;
+  border: 2px solid #fff;
+  text-align: center;
+  z-index: 99999;
+  animation: blink 0.2s step-start infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #000;
+  color: #00ffcc;
+  border: 2px solid #00ffcc;
+  font-family: 'Press Start 2P', monospace;
+  padding: 10px 15px;
+  font-size: 0.6rem;
+  cursor: pointer;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+
 
 

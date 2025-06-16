@@ -5,10 +5,34 @@
   <title>My Life in 8-Bit</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
 </head>
 <body>
 
+  <!-- HUD Overlay -->
+  <div class="hud">
+    <div class="hud-line">
+      <span>LEVEL:</span> <span id="hud-level">1</span>
+    </div>
+    <div class="hud-line">
+      <span>HAIR LOSS:</span> <span id="hud-hair">🧑‍🦱🧑‍🦱🧑‍🦱</span>
+    </div>
+    <div class="hud-line">
+      <span>XP:</span> <span id="hud-xp">000100</span>
+    </div>
+    <div class="hud-line">
+      <span>ENERGY:</span> <span id="hud-energy">🔋</span>
+    </div>
+    <div class="hud-line">
+      <span>☕ CUPS:</span> <span id="hud-coffee">1</span>
+    </div>
+  </div>
+
+  <!-- God Mode Banner -->
+  <div id="god-mode-banner" class="god-banner">
+    YOU HAVE TRANSCENDED STRESS – WELCOME, DEBUGGING GOD.
+  </div>
+
+  <!-- Levels -->
   <section class="level" id="level-1">
     <h1>Level 1: Press Start – High School Hero</h1>
     <p>Completed 12 years of side quests, survived pop quizzes and cafeteria food.</p>
@@ -20,69 +44,169 @@
     <p>Wandering through code forests, debugging my destiny.</p>
     <img src="images/computer science student.png" alt="Computer Science Student" class="avatar">
   </section>
+
   <section class="level" id="level-3">
     <h1>Level 3: Side Quest – Moved to Hungary</h1>
     <p>New land, no map, just vibes (and a suitcase heavier than my confidence).</p>
-    <img src="images/traveler.png" alt="traveler" class="avatar">
-</section>
-<section class="level" id="level-4">
-  <h1>Level 4: Achievement Unlocked – BSc Graduate</h1>
-  <p>Survived deadlines, defeated final bosses, earned my shiny diploma.</p>
-  <img src="images/graduate.png" alt="Graduate" class="avatar">
-</section>
-<section class="level" id="level-5">
-  <h1>Level 5: New Map Unlocked – Moved to the Netherlands</h1>
-  <p>Chasing dreams with luggage in one hand and Google Translate in the other.</p>
-  <img src="images/moved-to-netherlands.png" alt="Moved to Netherlands" class="avatar">
-</section>
+    <img src="images/traveler.png" alt="Traveler" class="avatar">
+  </section>
 
-<section class="level" id="level-6">
-  <h1>Level 6: Power-Up – Found HackYourFuture</h1>
-  <p>Discovered the secret item that boosts career XP.</p>
-  <img src="images/found-HYF.png" alt="Hack Your future" class="avatar">
-</section>
+  <section class="level" id="level-4">
+    <h1>Level 4: Achievement Unlocked – BSc Graduate</h1>
+    <p>Survived deadlines, defeated final bosses, earned my shiny diploma.</p>
+    <img src="images/graduate.png" alt="Graduate" class="avatar">
+  </section>
 
-<section class="level" id="level-7">
-  <h1>Level 7: Boss Fight – Starting the Bootcamp</h1>
-  <p>Bug by bug, I swung my way through DOM dragons and async monsters. No cheat codes used.</p>
-  <img src="images/boss-fight-bootcamp.png" alt="Bootcamp Boss Fight" class="avatar">
-</section>
+  <section class="level" id="level-5">
+    <h1>Level 5: New Map Unlocked – Moved to the Netherlands</h1>
+    <p>Chasing dreams with luggage in one hand and Google Translate in the other.</p>
+    <img src="images/moved-to-netherlands.png" alt="Moved to Netherlands" class="avatar">
+  </section>
 
-<section class="level" id="level-8">
-  <h1>Level 8: Victory – Graduated from the Bootcamp</h1>
-  <p>+100 Confidence • +100 Skills • +1 Diploma</p>
-  <img src="images/bootcanp-graduation.png" alt="Bootcamp Graduate" class="avatar">
-</section>
+  <section class="level" id="level-6">
+    <h1>Level 6: Power-Up – Found HackYourFuture</h1>
+    <p>Discovered the secret item that boosts career XP.</p>
+    <img src="images/found-HYF.png" alt="Hack Your Future" class="avatar">
+  </section>
 
-<section class="level" id="level-9">
-  <h1>Level 9: Final Level – Finding a Job</h1>
-  <p>Loading… waiting for the right mission to spawn.</p>
-  <img src="images/finding-job.png" alt="Finding a Job" class="avatar">
-</section>
+  <section class="level" id="level-7">
+    <h1>Level 7: Boss Fight – Starting the Bootcamp</h1>
+    <p>Bug by bug, I swung my way through DOM dragons and async monsters. No cheat codes used.</p>
+    <img src="images/boss-fight-bootcamp.png" alt="Bootcamp Boss Fight" class="avatar">
+  </section>
 
+  <section class="level" id="level-8">
+    <h1>Level 8: Victory – Graduated from the Bootcamp</h1>
+    <p>+100 Confidence • +100 Skills • +1 Diploma</p>
+    <img src="images/bootcanp-graduation.png" alt="Bootcamp Graduate" class="avatar">
+  </section>
 
+  <section class="level" id="level-9">
+    <h1>Level 9: Final Level – Finding a Job</h1>
+    <p>Loading… waiting for the right mission to spawn.</p>
+    <img src="images/finding-job.png" alt="Finding a Job" class="avatar">
+  </section>
 
-<audio autoplay loop>
-  <source src="https://vgmsite.com/soundtracks/mega-man-2/vyhtcclacq/1-01%20Title%20Theme.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-<script>
-  const sections = document.querySelectorAll('.level');
+  <!-- Background Music -->
+  <audio autoplay loop>
+    <source src="https://vgmsite.com/soundtracks/mega-man-2/vyhtcclacq/1-01%20Title%20Theme.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 
-  const showOnScroll = () => {
-    const trigger = window.innerHeight * 0.85;
+  <!-- Script -->
+  <script>
+    const sections = document.querySelectorAll('.level');
 
-    sections.forEach(section => {
-      const top = section.getBoundingClientRect().top;
-      if (top < trigger) {
-        section.classList.add('visible');
+    const hudLevel = document.getElementById('hud-level');
+    const hudXP = document.getElementById('hud-xp');
+    const hudHair = document.getElementById('hud-hair');
+    const hudEnergy = document.getElementById('hud-energy');
+    const hudCoffee = document.getElementById('hud-coffee');
+
+    const xpPerLevel = 250;
+
+    const showOnScroll = () => {
+      const trigger = window.innerHeight * 0.85;
+      sections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        if (top < trigger) {
+          section.classList.add('visible');
+        }
+      });
+    };
+
+    const updateHUD = () => {
+      sections.forEach((section, index) => {
+        const top = section.getBoundingClientRect().top;
+        const bottom = section.getBoundingClientRect().bottom;
+        if (top <= window.innerHeight / 2 && bottom >= window.innerHeight / 2) {
+          const currentLevel = index + 1;
+          hudLevel.textContent = currentLevel;
+          hudXP.textContent = String(currentLevel * xpPerLevel).padStart(6, '0');
+
+          let hairStatus = "🧑‍🦱🧑‍🦱🧑‍🦱";
+          if (currentLevel >= 3) hairStatus = "🧑‍🦱🧑‍🦱🧑";
+          if (currentLevel >= 5) hairStatus = "🧑‍🦱🧑‍🦲🧑";
+          if (currentLevel >= 7) hairStatus = "🧑‍🦲🧑‍🦲🧑";
+          if (currentLevel === 9) hairStatus = "🧑‍🦲🧑‍🦲✨";
+          hudHair.textContent = hairStatus;
+
+          const energyEmojis = ["🔋", "🔌", "🪫", "😴", "🧟‍♂️", "👻", "🔥", "💀"];
+          hudEnergy.textContent = energyEmojis[Math.min(currentLevel - 1, energyEmojis.length - 1)];
+
+          hudCoffee.textContent = currentLevel + 1;
+        }
+      });
+    };
+
+    window.addEventListener('scroll', () => {
+      showOnScroll();
+      updateHUD();
+    });
+
+    window.addEventListener('load', () => {
+      showOnScroll();
+      updateHUD();
+    });
+
+    // Konami Code Activation
+    const konamiCode = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a"];
+    let inputBuffer = [];
+
+    window.addEventListener("keydown", (e) => {
+      inputBuffer.push(e.key);
+      inputBuffer = inputBuffer.slice(-konamiCode.length);
+      if (inputBuffer.join("") === konamiCode.join("")) {
+        activateGodMode();
       }
     });
-  };
 
-  window.addEventListener('scroll', showOnScroll);
-  window.addEventListener('load', showOnScroll);
-</script>
+    function activateGodMode() {
+      hudHair.textContent = "🧑‍🦱🧑‍🦱🧑‍🦱";
+      hudXP.textContent = "∞";
+      hudEnergy.textContent = "🌈 GOD MODE";
+      hudCoffee.textContent = "☕ ∞";
+
+      const banner = document.getElementById("god-mode-banner");
+      banner.style.display = "block";
+
+      const audio = new Audio("https://freesound.org/data/previews/66/66717_931655-lq.mp3");
+      audio.play();
+      // 🎉 Confetti burst!
+  confetti({
+    particleCount: 150,
+    spread: 100,
+    origin: { y: 0.6 },
+    colors: ['#00ffcc', '#ff66cc', '#ffff00', '#00ffff'],
+  });
+
+  // Optional: repeat a few bursts for drama
+  setTimeout(() => confetti({ particleCount: 100, spread: 80, origin: { y: 0.4 } }), 500);
+  setTimeout(() => confetti({ particleCount: 100, spread: 90, origin: { y: 0.7 } }), 1000);
+  const backToTopBtn = document.getElementById('back-to-top');
+
+// Show button after level 2
+window.addEventListener('scroll', () => {
+  const level2 = document.getElementById('level-2');
+  if (level2.getBoundingClientRect().top < 0) {
+    backToTopBtn.classList.add('show');
+  } else {
+    backToTopBtn.classList.remove('show');
+  }
+});
+
+// Scroll to top on click
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <button id="back-to-top" class="back-to-top">⬆️ TOP</button>
 
 </body>
 </html>
