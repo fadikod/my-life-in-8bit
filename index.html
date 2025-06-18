@@ -8,205 +8,344 @@
 </head>
 <body>
 
+  <!-- Flying Easter Egg -->
+  <div id="easter-egg" class="easter-egg">🥚</div>
+
+
   <!-- HUD Overlay -->
   <div class="hud">
-    <div class="hud-line">
-      <span>LEVEL:</span> <span id="hud-level">1</span>
-    </div>
-    <div class="hud-line">
-      <span>HAIR LOSS:</span> <span id="hud-hair">🧑‍🦱🧑‍🦱🧑‍🦱</span>
-    </div>
-    <div class="hud-line">
-      <span>XP:</span> <span id="hud-xp">000100</span>
-    </div>
-    <div class="hud-line">
-      <span>ENERGY:</span> <span id="hud-energy">🔋</span>
-    </div>
-    <div class="hud-line">
-      <span>☕ CUPS:</span> <span id="hud-coffee">1</span>
-    </div>
+    <div class="hud-line"><span>LEVEL:</span> <span id="hud-level">1</span></div>
+    <div class="hud-line"><span>HAIR LOSS:</span> <span id="hud-hair">🧑‍🦱🧑‍🦱🧑‍🦱</span></div>
+    <div class="hud-line"><span>XP:</span> <span id="hud-xp">000100</span></div>
+    <div class="hud-line"><span>ENERGY:</span> <span id="hud-energy">🔋</span></div>
+    <div class="hud-line"><span>☕ CUPS:</span> <span id="hud-coffee">1</span></div>
   </div>
 
-  <!-- God Mode Banner -->
-  <div id="god-mode-banner" class="god-banner">
-    YOU HAVE TRANSCENDED STRESS – WELCOME, DEBUGGING GOD.
+  <!-- Banners -->
+  <div id="love-mode-banner" class="love-banner">💍 LOVE MODE UNLOCKED – You Married the Boss 💘
   </div>
+  <div id="god-mode-banner" class="god-banner">YOU HAVE TRANSCENDED STRESS – WELCOME, DEBUGGING GOD.</div>
 
-  <!-- Levels -->
+  <!-- Levels 1–10 -->
+  
   <section class="level" id="level-1">
     <h1>Level 1: Press Start – High School Hero</h1>
     <p>Completed 12 years of side quests, survived pop quizzes and cafeteria food.</p>
-    <img src="images/high school hero.png" alt="High School Hero" class="avatar">
+    <img src="images/high school hero.png" alt="Press Start – High School Hero" class="avatar">
   </section>
-
   <section class="level" id="level-2">
     <h1>Level 2: Leveling Up – Studying Computer Science</h1>
     <p>Wandering through code forests, debugging my destiny.</p>
-    <img src="images/computer science student.png" alt="Computer Science Student" class="avatar">
+    <img src="images/computer science student.png" alt="Leveling Up – Studying Computer Science" class="avatar">
   </section>
-
   <section class="level" id="level-3">
     <h1>Level 3: Side Quest – Moved to Hungary</h1>
     <p>New land, no map, just vibes (and a suitcase heavier than my confidence).</p>
-    <img src="images/traveler.png" alt="Traveler" class="avatar">
+    <img src="images/traveler.png" alt="Side Quest – Moved to Hungary" class="avatar">
   </section>
-
   <section class="level" id="level-4">
     <h1>Level 4: Achievement Unlocked – BSc Graduate</h1>
     <p>Survived deadlines, defeated final bosses, earned my shiny diploma.</p>
-    <img src="images/graduate.png" alt="Graduate" class="avatar">
+    <img src="images/graduate.png" alt="Achievement Unlocked – BSc Graduate" class="avatar">
   </section>
-
   <section class="level" id="level-5">
     <h1>Level 5: New Map Unlocked – Moved to the Netherlands</h1>
     <p>Chasing dreams with luggage in one hand and Google Translate in the other.</p>
-    <img src="images/moved-to-netherlands.png" alt="Moved to Netherlands" class="avatar">
+    <img src="images/moved-to-netherlands.png" alt="New Map Unlocked – Moved to the Netherlands" class="avatar">
   </section>
-
   <section class="level" id="level-6">
     <h1>Level 6: Power-Up – Found HackYourFuture</h1>
     <p>Discovered the secret item that boosts career XP.</p>
-    <img src="images/found-HYF.png" alt="Hack Your Future" class="avatar">
+    <img src="images/found-HYF.png" alt="Power-Up – Found HackYourFuture" class="avatar">
   </section>
-
   <section class="level" id="level-7">
     <h1>Level 7: Boss Fight – Starting the Bootcamp</h1>
     <p>Bug by bug, I swung my way through DOM dragons and async monsters. No cheat codes used.</p>
-    <img src="images/boss-fight-bootcamp.png" alt="Bootcamp Boss Fight" class="avatar">
+    <img src="images/boss-fight-bootcamp.png" alt="Boss Fight – Starting the Bootcamp" class="avatar">
   </section>
-
   <section class="level" id="level-8">
     <h1>Level 8: Victory – Graduated from the Bootcamp</h1>
     <p>+100 Confidence • +100 Skills • +1 Diploma</p>
-    <img src="images/bootcanp-graduation.png" alt="Bootcamp Graduate" class="avatar">
+    <img src="images/bootcanp-graduation.png" alt="Victory – Graduated from the Bootcamp" class="avatar">
   </section>
-
   <section class="level" id="level-9">
     <h1>Level 9: Final Level – Finding a Job</h1>
     <p>Loading… waiting for the right mission to spawn.</p>
-    <img src="images/finding-job.png" alt="Finding a Job" class="avatar">
+    <img src="images/finding-job.png" alt="Final Level – Finding a Job" class="avatar">
+  </section>
+  <section class="level" id="level-10">
+    <h1>Level 10: True End - Married to the Boss</h1>
+    <p>Turns out the final boss had a heart. Bonus unlocked: eternal co-op mode.</p>
+    <img src="images/married-to-the-boss.png" alt="True End - Married to the Boss" class="avatar">
   </section>
 
-  <!-- Background Music -->
-  <audio autoplay loop>
-    <source src="https://vgmsite.com/soundtracks/mega-man-2/vyhtcclacq/1-01%20Title%20Theme.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
 
-  <!-- Script -->
+  <!-- Back to Top -->
+  <button id="back-to-top" class="back-to-top">⬆️ TOP</button>
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Life in 8-Bit</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Flying Easter Egg -->
+  <div id="easter-egg" class="easter-egg">🥚</div>
+
+
+  <!-- HUD Overlay -->
+  <div class="hud">
+    <div class="hud-line"><span>LEVEL:</span> <span id="hud-level">1</span></div>
+    <div class="hud-line"><span>HAIR LOSS:</span> <span id="hud-hair">🧑‍🦱🧑‍🦱🧑‍🦱</span></div>
+    <div class="hud-line"><span>XP:</span> <span id="hud-xp">000100</span></div>
+    <div class="hud-line"><span>ENERGY:</span> <span id="hud-energy">🔋</span></div>
+    <div class="hud-line"><span>☕ CUPS:</span> <span id="hud-coffee">1</span></div>
+  </div>
+
+  <!-- Banners -->
+  <div id="love-mode-banner" class="love-banner">💍 LOVE MODE UNLOCKED – You Married the Boss 💘
+  </div>
+  <div id="god-mode-banner" class="god-banner">YOU HAVE TRANSCENDED STRESS – WELCOME, DEBUGGING GOD.</div>
+
+  <!-- Levels 1–10 -->
+  
+  <section class="level" id="level-1">
+    <h1>Level 1: Press Start – High School Hero</h1>
+    <p>Completed 12 years of side quests, survived pop quizzes and cafeteria food.</p>
+    <img src="images/high school hero.png" alt="Press Start – High School Hero" class="avatar">
+  </section>
+  <section class="level" id="level-2">
+    <h1>Level 2: Leveling Up – Studying Computer Science</h1>
+    <p>Wandering through code forests, debugging my destiny.</p>
+    <img src="images/computer science student.png" alt="Leveling Up – Studying Computer Science" class="avatar">
+  </section>
+  <section class="level" id="level-3">
+    <h1>Level 3: Side Quest – Moved to Hungary</h1>
+    <p>New land, no map, just vibes (and a suitcase heavier than my confidence).</p>
+    <img src="images/traveler.png" alt="Side Quest – Moved to Hungary" class="avatar">
+  </section>
+  <section class="level" id="level-4">
+    <h1>Level 4: Achievement Unlocked – BSc Graduate</h1>
+    <p>Survived deadlines, defeated final bosses, earned my shiny diploma.</p>
+    <img src="images/graduate.png" alt="Achievement Unlocked – BSc Graduate" class="avatar">
+  </section>
+  <section class="level" id="level-5">
+    <h1>Level 5: New Map Unlocked – Moved to the Netherlands</h1>
+    <p>Chasing dreams with luggage in one hand and Google Translate in the other.</p>
+    <img src="images/moved-to-netherlands.png" alt="New Map Unlocked – Moved to the Netherlands" class="avatar">
+  </section>
+  <section class="level" id="level-6">
+    <h1>Level 6: Power-Up – Found HackYourFuture</h1>
+    <p>Discovered the secret item that boosts career XP.</p>
+    <img src="images/found-HYF.png" alt="Power-Up – Found HackYourFuture" class="avatar">
+  </section>
+  <section class="level" id="level-7">
+    <h1>Level 7: Boss Fight – Starting the Bootcamp</h1>
+    <p>Bug by bug, I swung my way through DOM dragons and async monsters. No cheat codes used.</p>
+    <img src="images/boss-fight-bootcamp.png" alt="Boss Fight – Starting the Bootcamp" class="avatar">
+  </section>
+  <section class="level" id="level-8">
+    <h1>Level 8: Victory – Graduated from the Bootcamp</h1>
+    <p>+100 Confidence • +100 Skills • +1 Diploma</p>
+    <img src="images/bootcanp-graduation.png" alt="Victory – Graduated from the Bootcamp" class="avatar">
+  </section>
+  <section class="level" id="level-9">
+    <h1>Level 9: Final Level – Finding a Job</h1>
+    <p>Loading… waiting for the right mission to spawn.</p>
+    <img src="images/finding-job.png" alt="Final Level – Finding a Job" class="avatar">
+  </section>
+  <section class="level" id="level-10">
+    <h1>Level 10: True End - Married to the Boss</h1>
+    <p>Turns out the final boss had a heart. Bonus unlocked: eternal co-op mode.</p>
+    <img src="images/married-to-the-boss.png" alt="True End - Married to the Boss" class="avatar">
+  </section>
+
+
+  <!-- Back to Top -->
+  <button id="back-to-top" class="back-to-top">⬆️ TOP</button>
+
   <script>
-    const sections = document.querySelectorAll('.level');
+  const sections = document.querySelectorAll('.level');
+  const hudLevel = document.getElementById('hud-level');
+  const hudXP = document.getElementById('hud-xp');
+  const hudHair = document.getElementById('hud-hair');
+  const hudEnergy = document.getElementById('hud-energy');
+  const hudCoffee = document.getElementById('hud-coffee');
+  const xpPerLevel = 250;
 
-    const hudLevel = document.getElementById('hud-level');
-    const hudXP = document.getElementById('hud-xp');
-    const hudHair = document.getElementById('hud-hair');
-    const hudEnergy = document.getElementById('hud-energy');
-    const hudCoffee = document.getElementById('hud-coffee');
-
-    const xpPerLevel = 250;
-
-    const showOnScroll = () => {
-      const trigger = window.innerHeight * 0.85;
-      sections.forEach(section => {
-        const top = section.getBoundingClientRect().top;
-        if (top < trigger) {
-          section.classList.add('visible');
-        }
-      });
-    };
-
-    const updateHUD = () => {
-      sections.forEach((section, index) => {
-        const top = section.getBoundingClientRect().top;
-        const bottom = section.getBoundingClientRect().bottom;
-        if (top <= window.innerHeight / 2 && bottom >= window.innerHeight / 2) {
-          const currentLevel = index + 1;
-          hudLevel.textContent = currentLevel;
-          hudXP.textContent = String(currentLevel * xpPerLevel).padStart(6, '0');
-
-          let hairStatus = "🧑‍🦱🧑‍🦱🧑‍🦱";
-          if (currentLevel >= 3) hairStatus = "🧑‍🦱🧑‍🦱🧑";
-          if (currentLevel >= 5) hairStatus = "🧑‍🦱🧑‍🦲🧑";
-          if (currentLevel >= 7) hairStatus = "🧑‍🦲🧑‍🦲🧑";
-          if (currentLevel === 9) hairStatus = "🧑‍🦲🧑‍🦲✨";
-          hudHair.textContent = hairStatus;
-
-          const energyEmojis = ["🔋", "🔌", "🪫", "😴", "🧟‍♂️", "👻", "🔥", "💀"];
-          hudEnergy.textContent = energyEmojis[Math.min(currentLevel - 1, energyEmojis.length - 1)];
-
-          hudCoffee.textContent = currentLevel + 1;
-        }
-      });
-    };
-
-    window.addEventListener('scroll', () => {
-      showOnScroll();
-      updateHUD();
+  const showOnScroll = () => {
+    const trigger = window.innerHeight * 0.85;
+    sections.forEach(section => {
+      const top = section.getBoundingClientRect().top;
+      if (top < trigger) section.classList.add('visible');
     });
+  };
 
-    window.addEventListener('load', () => {
-      showOnScroll();
-      updateHUD();
-    });
+  const updateHUD = () => {
+    sections.forEach((section, index) => {
+      const top = section.getBoundingClientRect().top;
+      const bottom = section.getBoundingClientRect().bottom;
+      if (top <= window.innerHeight / 2 && bottom >= window.innerHeight / 2) {
+        const currentLevel = index + 1;
+        hudLevel.textContent = currentLevel;
+        hudXP.textContent = currentLevel === 10 ? "99999999" : String(currentLevel * xpPerLevel).padStart(6, '0');
 
-    // Konami Code Activation
-    const konamiCode = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a"];
-    let inputBuffer = [];
+        let hairStatus = "🧑‍🦱🧑‍🦱🧑‍🦱";
+        if (currentLevel >= 3) hairStatus = "🧑‍🦱🧑‍🦱🧑";
+        if (currentLevel >= 5) hairStatus = "🧑‍🦱🧑‍🦲🧑";
+        if (currentLevel >= 7) hairStatus = "🧑‍🦲🧑‍🦲🧑";
+        if (currentLevel === 9) hairStatus = "🧑‍🦲🧑‍🦲✨";
+        if (currentLevel === 10) hairStatus = "💇💖💇";
+        hudHair.textContent = hairStatus;
 
-    window.addEventListener("keydown", (e) => {
-      inputBuffer.push(e.key);
-      inputBuffer = inputBuffer.slice(-konamiCode.length);
-      if (inputBuffer.join("") === konamiCode.join("")) {
-        activateGodMode();
+        const energyEmojis = ["🔋", "🔌", "🪫", "😴", "🧟‍♂️", "👻", "🔥", "💀"];
+        hudEnergy.textContent = currentLevel === 10 ? "💖∞" : energyEmojis[Math.min(currentLevel - 1, energyEmojis.length - 1)];
+        hudCoffee.textContent = currentLevel === 10 ? "☕∞ + ❤️" : currentLevel + 1;
+
+        if (currentLevel === 10 && !window.loveModePlayed) {
+          window.loveModePlayed = true;
+          document.getElementById("love-mode-banner").style.display = "block";
+          const loveSound = new Audio("https://freesound.org/data/previews/384/384468_3996600-lq.mp3");
+          loveSound.volume = 0.5;
+          loveSound.play();
+          confetti({ particleCount: 150, spread: 120, origin: { y: 0.6 }, colors: ['#ff66cc', '#00ffff', '#ffff66', '#ccff66'] });
+          setTimeout(() => confetti({ particleCount: 100, spread: 100, origin: { y: 0.4 } }), 600);
+          setTimeout(() => confetti({ particleCount: 100, spread: 90, origin: { y: 0.8 } }), 1200);
+        }
       }
     });
+  };
 
-    function activateGodMode() {
-      hudHair.textContent = "🧑‍🦱🧑‍🦱🧑‍🦱";
-      hudXP.textContent = "∞";
-      hudEnergy.textContent = "🌈 GOD MODE";
-      hudCoffee.textContent = "☕ ∞";
+  window.addEventListener('scroll', () => { showOnScroll(); updateHUD(); });
+  window.addEventListener('load', () => { showOnScroll(); updateHUD(); });
 
-      const banner = document.getElementById("god-mode-banner");
-      banner.style.display = "block";
+  // Easter Eggs
+  const godModeCode = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];
+  const eggCode = [...godModeCode];
+  const glitchCode = ['g','l','i','t','c','h'];
 
-      const audio = new Audio("https://freesound.org/data/previews/66/66717_931655-lq.mp3");
-      audio.play();
-      // 🎉 Confetti burst!
-  confetti({
-    particleCount: 150,
-    spread: 100,
-    origin: { y: 0.6 },
-    colors: ['#00ffcc', '#ff66cc', '#ffff00', '#00ffff'],
-  });
+  let keyBuffer = [];
 
-  // Optional: repeat a few bursts for drama
-  setTimeout(() => confetti({ particleCount: 100, spread: 80, origin: { y: 0.4 } }), 500);
-  setTimeout(() => confetti({ particleCount: 100, spread: 90, origin: { y: 0.7 } }), 1000);
-  const backToTopBtn = document.getElementById('back-to-top');
+  window.addEventListener('keydown', function(e) {
+    keyBuffer.push(e.key.toLowerCase());
+    if (keyBuffer.length > 15) keyBuffer.shift();
 
-// Show button after level 2
-window.addEventListener('scroll', () => {
-  const level2 = document.getElementById('level-2');
-  if (level2.getBoundingClientRect().top < 0) {
-    backToTopBtn.classList.add('show');
-  } else {
-    backToTopBtn.classList.remove('show');
-  }
-});
-
-// Scroll to top on click
-backToTopBtn.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-});
-
+    if (arraysMatch(keyBuffer.slice(-godModeCode.length), godModeCode.map(k => k.toLowerCase()))) {
+      activateGodMode();
+      keyBuffer = [];
     }
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-  <button id="back-to-top" class="back-to-top">⬆️ TOP</button>
+
+    if (arraysMatch(keyBuffer.slice(-eggCode.length), eggCode.map(k => k.toLowerCase()))) {
+      triggerFlyingEgg();
+      keyBuffer = [];
+    }
+
+    if (arraysMatch(keyBuffer.slice(-glitchCode.length), glitchCode)) {
+      triggerGlitchMode();
+      keyBuffer = [];
+    }
+  });
+
+  function arraysMatch(a, b) {
+    return JSON.stringify(a) === JSON.stringify(b);
+  }
+
+  function triggerFlyingEgg() {
+    const egg = document.getElementById('easter-egg');
+    if (!egg) return;
+
+    egg.style.display = 'block';
+    egg.style.animation = 'fly-across 5s linear forwards';
+
+    setTimeout(() => {
+      egg.style.display = 'none';
+      egg.style.animation = 'none';
+    }, 5000);
+  }
+
+  function triggerGlitchMode() {
+    document.body.classList.add('glitch-mode');
+    setTimeout(() => {
+      document.body.classList.remove('glitch-mode');
+    }, 6000);
+  }
+
+  function activateGodMode() {
+    hudHair.textContent = "🧑‍🦱🧑‍🦱🧑‍🦱";
+    hudXP.textContent = "∞";
+    hudEnergy.textContent = "🌈 GOD MODE";
+    hudCoffee.textContent = "☕ ∞";
+    document.getElementById("god-mode-banner").style.display = "block";
+    const audio = new Audio("https://freesound.org/data/previews/66/66717_931655-lq.mp3");
+    audio.play();
+    confetti({ particleCount: 150, spread: 100, origin: { y: 0.6 }, colors: ['#00ffcc', '#ff66cc', '#ffff00', '#00ffff'] });
+    setTimeout(() => confetti({ particleCount: 100, spread: 80, origin: { y: 0.4 } }), 500);
+    setTimeout(() => confetti({ particleCount: 100, spread: 90, origin: { y: 0.7 } }), 1000);
+  }
+
+  // Hide banners on interaction
+  const hideBanners = () => {
+    document.getElementById('love-mode-banner').style.display = 'none';
+    document.getElementById('god-mode-banner').style.display = 'none';
+  };
+  document.addEventListener('click', hideBanners);
+  document.addEventListener('contextmenu', hideBanners);
+  document.addEventListener('keydown', hideBanners);
+
+  // Back to Top button logic
+  const backToTopBtn = document.getElementById('back-to-top');
+  window.addEventListener('scroll', () => {
+    const level2 = document.getElementById('level-2');
+    backToTopBtn.classList.toggle('show', level2.getBoundingClientRect().top < 0);
+  });
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  const secretBtn = document.getElementById('secret-btn');
+const secretPopup = document.getElementById('secret-popup');
+
+secretBtn.addEventListener('click', () => {
+  const isVisible = secretPopup.style.display === 'block';
+  secretPopup.style.display = isVisible ? 'none' : 'block';
+});
+
+</script>
+
+ <!-- Secret Code Button -->
+<button id="secret-btn" class="secret-btn">SECRETS?</button>
+
+<!-- Hidden Guide Box -->
+<div id="secret-popup" class="secret-popup">
+  <h2>🕹️ Secret Codes</h2>
+  <ul>
+    <li><strong>Konami Code</strong>: ↑↑↓↓←→←→BA – <em>Triggers God Mode & Flying Egg</em></li>
+    <li><strong>glitch</strong>: type "glitch" – <em>Enters Glitch Mode</em></li>
+    <li><strong>love</strong>: ❤️ Level 10 unlocks automatically</li>
+  </ul>
+  <p style="font-size: 10px;">(Try typing, not clicking!)</p>
+</div>
+
+</body>
+</html>
+
+ <!-- Secret Code Button -->
+<button id="secret-btn" class="secret-btn">SECRETS?</button>
+
+<!-- Hidden Guide Box -->
+<div id="secret-popup" class="secret-popup">
+  <h2>🕹️ Secret Codes</h2>
+  <ul>
+    <li><strong>Konami Code</strong>: ↑↑↓↓←→←→BA – <em>Triggers God Mode & Flying Egg</em></li>
+    <li><strong>glitch</strong>: type "glitch" – <em>Enters Glitch Mode</em></li>
+    <li><strong>love</strong>: ❤️ Level 10 unlocks automatically</li>
+  </ul>
+  <p style="font-size: 10px;">(Try typing, not clicking!)</p>
+</div>
 
 </body>
 </html>
