@@ -5,6 +5,7 @@
   <title>My Life in 8-Bit</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
 
@@ -78,7 +79,15 @@
     <img src="images/married-to-the-boss.png" alt="Married to the Boss" class="avatar">
   </section>
 
-  <!-- JS: HUD + Scroll Fix -->
+  <!-- Banners -->
+  <div id="love-mode-banner" class="love-banner">
+    💖 TRUE ENDING REACHED – You Unlocked Eternal Co-Op Mode 💑
+  </div>
+  <div id="god-mode-banner" class="god-banner">
+    YOU HAVE TRANSCENDED STRESS – WELCOME, DEBUGGING GOD.
+  </div>
+
+  <!-- JS -->
   <script>
     const sections = document.querySelectorAll('.level');
     const hudLevel = document.getElementById('hud-level');
@@ -86,6 +95,8 @@
     const hudHair = document.getElementById('hud-hair');
     const hudEnergy = document.getElementById('hud-energy');
     const hudCoffee = document.getElementById('hud-coffee');
+    const loveBanner = document.getElementById("love-mode-banner");
+    const godBanner = document.getElementById("god-mode-banner");
     const xpPerLevel = 250;
 
     const updateHUD = () => {
@@ -113,7 +124,14 @@
           hudEnergy.textContent = currentLevel === 10 ? "💖∞" : energyEmojis[Math.min(currentLevel - 1, energyEmojis.length - 1)];
           hudCoffee.textContent = currentLevel === 10 ? "☕∞ + ❤️" : currentLevel + 1;
 
-          break; // Stop checking once the active level is found
+          if (currentLevel === 10) {
+            loveBanner.innerHTML = "💖 TRUE ENDING REACHED – You Unlocked Eternal Co-Op Mode 💑";
+            loveBanner.style.display = "block";
+          } else {
+            loveBanner.style.display = "none";
+          }
+
+          break;
         }
       }
     };
@@ -135,6 +153,62 @@
       showOnScroll();
       updateHUD();
     });
+
+    loveBanner.addEventListener('click', () => loveBanner.style.display = "none");
+    godBanner.addEventListener('click', () => godBanner.style.display = "none");
+
+    const godCode = ["i", "d", "d", "q", "d"];
+    let godBuffer = [];
+
+    let glitchTyped = [];
+
+    const konamiCode = [
+      "arrowup", "arrowup",
+      "arrowdown", "arrowdown",
+      "arrowleft", "arrowright",
+      "arrowleft", "arrowright",
+      "b", "a"
+    ];
+    let konamiBuffer = [];
+
+    window.addEventListener("keydown", (e) => {
+      const key = e.key.toLowerCase();
+
+      // GOD MODE
+      godBuffer.push(key);
+      godBuffer = godBuffer.slice(-godCode.length);
+      if (godBuffer.join("") === godCode.join("")) {
+        godBanner.style.display = "block";
+      }
+
+      // GLITCH MODE
+      if (/^[a-z]$/.test(key)) {
+        glitchTyped.push(key);
+        glitchTyped = glitchTyped.slice(-6);
+        if (glitchTyped.join("") === "glitch") {
+          document.body.classList.add("glitch-mode");
+          setTimeout(() => {
+            document.body.classList.remove("glitch-mode");
+          }, 10000);
+        }
+      }
+
+      // KONAMI CODE – Cheat + Confetti
+      konamiBuffer.push(key);
+      konamiBuffer = konamiBuffer.slice(-konamiCode.length);
+      if (konamiBuffer.join("") === konamiCode.join("")) {
+        loveBanner.innerHTML = "🎮 CHEAT CODE ACCEPTED – You Charmed the Final Boss 💘";
+        loveBanner.style.display = "block";
+        if (window.confetti) {
+          confetti({
+            particleCount: 150,
+            spread: 100,
+            origin: { y: 0.6 }
+          });
+        }
+      }
+    });
   </script>
+
 </body>
 </html>
