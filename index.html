@@ -22,13 +22,13 @@
   <section class="level" id="level-1">
     <h1>Level 1: Press Start – High School Hero</h1>
     <p>Completed 12 years of side quests, survived pop quizzes and cafeteria food.</p>
-    <img src="images/high school hero.png" alt="High School Hero" class="avatar">
+    <img src="images/high-school-hero.png" alt="High School Hero" class="avatar">
   </section>
 
   <section class="level" id="level-2">
     <h1>Level 2: Leveling Up – Studying Computer Science</h1>
     <p>Wandering through code forests, debugging my destiny.</p>
-    <img src="images/computer science student.png" alt="Studying Computer Science" class="avatar">
+    <img src="images/computer-science-student.png" alt="Studying Computer Science" class="avatar">
   </section>
 
   <section class="level" id="level-3">
@@ -86,6 +86,8 @@
   <div id="god-mode-banner" class="god-banner">
     YOU HAVE TRANSCENDED STRESS – WELCOME, DEBUGGING GOD.
   </div>
+  <button id="back-to-top" class="back-to-top">⬆️ TOP</button>
+
 
   <!-- JS -->
   <script>
@@ -208,6 +210,23 @@
         }
       }
     });
+    const backToTopButton = document.getElementById("back-to-top");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    backToTopButton.classList.add("show");
+  } else {
+    backToTopButton.classList.remove("show");
+  }
+});
+
+backToTopButton.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+
   </script>
 
 </body>
