@@ -3,15 +3,15 @@ A retro-themed interactive web experience showcasing my personal journey across 
 
 ---
 
-## 🚀 Overview  
-**My Life in 8-Bit** is a playful, game-inspired website built using **HTML, CSS, and JavaScript**.  
+## 🧭 Overview  
+My Life in 8-Bit is a playful, game-inspired website built using **HTML, CSS, and JavaScript**.  
 It recreates the feel of classic 8-bit games while telling a story through scrolling levels, animations, and interactive elements.
 
 The project demonstrates clear understanding of fundamental programming concepts such as:
 
-- **Events** (scroll triggers, button interactions)
-- **Loops** (repeating animations and effects)
-- **Conditionals** (logic for interactive behaviors)
+- **Events** (scroll triggers, button interactions)  
+- **Loops** (repeating animations and effects)  
+- **Conditionals** (logic for interactive behaviors)  
 
 ---
 
@@ -26,11 +26,3 @@ The project demonstrates clear understanding of fundamental programming concepts
 View the project online:  
 👉 **https://fadikod.github.io/my-life-in-8bit/**
 
----
-
-## 📁 Project Structure  
-my-life-in-8bit
-│── index.html # main page
-│── style.css # styling and animations
-│── images/ # retro assets used in the project
-└── README.md # project documentation
