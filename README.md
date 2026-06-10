@@ -16,7 +16,8 @@ A retro-themed interactive web experience showcasing my personal journey across 
 👉 **https://fadikod.github.io/my-life-in-8bit/**
 
 ![My Life in 8-Bit Screenshot](screenshot.png)
-> _Add a screenshot of the site here — drag and drop an image into this file on GitHub_
+<img width="1903" height="945" alt="image" src="https://github.com/user-attachments/assets/949bb0dd-b5e6-4806-a828-e6432cb4ea9a" />
+
 
 ---
 
